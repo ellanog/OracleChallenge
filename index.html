@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-section">
+            <h1>Decodificador de Texto</h1> 
+            <textarea id="inputText" placeholder="Digite um texto que você deseja criptografar ou descriptografar."></textarea>
+            <p><small>Apenas letras minúsculas e sem acento.</small></p>
+            <div class="buttons">
+                <button id="encryptBtn" class="btn encrypt-btn">Criptografar</button>
+                <button id="decryptBtn" class="btn decrypt-btn">Descriptografar</button>
+            </div>
+        </div>
+        <div class="output-section">
+            <img src="C:/Users/Marcella/Downloads/decod.png" alt="Nenhuma mensagem encontrada">
+            <p class="output-message">Sua mensagem</p>
+            <p class="output-instruction">Veja aqui o seu texto criptografado ou descriptografado.</p>
+            <textarea id="outputText" readonly></textarea>
+            <button id="outputText" class="btn outputText">Copiar texto</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("copiar").addEventListener("click", function() {
+            var textoOutputText = document.getElementById("outputText");
+            textoOutputText.select(); 
+            document.execCommand("copy");
+        alert("Texto copiado para a área de transferência!");
+});
+    </script>
+</body>
+<footer>
+    <p>Criado por Marcella Nog em 2024</p>
+</footer>
+</html>
