@@ -24,3 +24,4 @@ function decryptText() {
 
 document.getElementById('encryptBtn').addEventListener('click', encryptText);
 document.getElementById('decryptBtn').addEventListener('click', decryptText);
+

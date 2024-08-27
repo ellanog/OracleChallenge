@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador de Texto</title>
     <link rel="stylesheet" href="style.css">
+   
+    
 </head>
 <body>
+    
+</header>
     <div class="container">
         <div class="input-section">
             <h1>Decodificador de Texto</h1> 
@@ -18,24 +22,27 @@
             </div>
         </div>
         <div class="output-section">
-            <img src="C:/Users/Marcella/Downloads/decod.png" alt="Nenhuma mensagem encontrada">
+            <img src="Imagens cod/decod.png" alt="Nenhuma mensagem encontrada">
             <p class="output-message">Sua mensagem</p>
             <p class="output-instruction">Veja aqui o seu texto criptografado ou descriptografado.</p>
             <textarea id="outputText" readonly></textarea>
-            <button id="outputText" class="btn outputText">Copiar texto</button>
+            <button id="copiar">Copiar Texto</button>
         </div>
     </div>
     <script src="script.js"></script>
     <script>
         document.getElementById("copiar").addEventListener("click", function() {
-            var textoOutputText = document.getElementById("outputText");
-            textoOutputText.select(); 
+            var outputText = document.getElementById("outputText");
+            outputText.select();
+            outputText.setSelectionRange(0, 99999);
             document.execCommand("copy");
-        alert("Texto copiado para a área de transferência!");
-});
+            alert("Texto copiado para a área de transferência!");
+        });
     </script>
 </body>
 <footer>
     <p>Criado por Marcella Nog em 2024</p>
+ 
+    </div>
 </footer>
 </html>
